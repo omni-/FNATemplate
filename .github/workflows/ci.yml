@@ -15,12 +15,9 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
-          
-      - name: Restore
-        run: dotnet restore ./untitled.sln
         
       - name: Build
-        run: dotnet build ./untitled.sln
+        run: dotnet build
       
       - name: Test
         run: dotnet test

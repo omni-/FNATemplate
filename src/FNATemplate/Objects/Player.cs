@@ -31,7 +31,7 @@ namespace FNATemplate.Objects
             MoveSpeed = 9;
         }
 
-        public void Update(GameTime gameTime, InputManager inputManager)
+        public void Update(GameTime gameTime, PlayerInput inputManager)
         {
             var actions = inputManager.GetActiveActions();
             Direction = Vector2.Zero; 

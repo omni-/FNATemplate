@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace FNATemplate.Input
 {
-    public class InputManager
+    public class PlayerInput
     {
         private static KeyboardState _keyboardState => Keyboard.GetState();
         private static MouseState _mouseState => Mouse.GetState();
@@ -23,7 +23,7 @@ namespace FNATemplate.Input
             { Keys.D, Actions.MoveRight }
         };
 
-        public InputManager()
+        public PlayerInput()
         {
             keyboardPrev = new();
             mousePrev = new();

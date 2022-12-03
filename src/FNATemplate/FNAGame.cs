@@ -16,7 +16,7 @@ class FNAGame : Game
             g.Run();
         }
     }
-    private InputManager _inputManager { get; init; }
+    private PlayerInput _input { get; init; }
 
     private SpriteBatch batch;
     private Player p;
@@ -31,7 +31,7 @@ class FNAGame : Game
         gdm.PreferredBackBufferHeight = 470;
         gdm.IsFullScreen = false;
         gdm.SynchronizeWithVerticalRetrace = true;
-        _inputManager = new();
+        _input = new();
         Content.RootDirectory = "resources";
     }
 
@@ -62,16 +62,16 @@ class FNAGame : Game
 
     protected override void Update(GameTime gameTime)
     {
-        if (_inputManager.IsNewKeypress(Keys.Space))
+        if (_input.IsNewKeypress(Keys.Space))
         {
             Console.WriteLine("spacebar pressed");
             sound.Play();
         }
 
-        p.Update(gameTime, _inputManager);
+        p.Update(gameTime, _input);
 
         // Run game logic in here. Do NOT render anything here!
-        _inputManager.Update();
+        _input.Update();
         base.Update(gameTime);
     }
 

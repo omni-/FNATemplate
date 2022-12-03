@@ -15,5 +15,7 @@ namespace FNATemplate.Constants
         public static string MoveLeft => "MoveLeft";
 
         public static string MoveRight => "MoveRight";
+
+        public static string Quit => "Escape";
     }
 }

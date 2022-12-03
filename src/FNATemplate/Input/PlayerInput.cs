@@ -20,7 +20,8 @@ namespace FNATemplate.Input
             { Keys.W, Actions.MoveUp },
             { Keys.A, Actions.MoveLeft },
             { Keys.S, Actions.MoveDown },
-            { Keys.D, Actions.MoveRight }
+            { Keys.D, Actions.MoveRight },
+            { Keys.Escape, Actions.Quit },
         };
 
         public PlayerInput()

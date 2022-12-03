@@ -26,4 +26,8 @@
     <None Include="$(SolutionDir)lib\bin\**\*.*" CopyToOutputDirectory="Always" Visible="false" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
 </Project>

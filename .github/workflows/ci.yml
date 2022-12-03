@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: windows-latest
     steps:
       - name: Checkout
@@ -18,5 +18,9 @@ jobs:
           
       - name: Restore
         run: dotnet restore ./untitled.sln
+        
       - name: Build
         run: dotnet build ./untitled.sln
+      
+      - name: Test
+        run: dotnet test
